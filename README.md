@@ -1,5 +1,6 @@
 # laravel-mail
 
+Laravel package for sending mail via the Sinevia Web Serices API
 
 MAIL_DRIVER=sinevia_mail
 
