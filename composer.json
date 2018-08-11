@@ -15,5 +15,12 @@
         "psr-4": {
             "Siinevia\\Mail\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sinevia\\Mail\\MailServiceProvider"
+            ]
+        }
     }
 }
