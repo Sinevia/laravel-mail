@@ -3,7 +3,7 @@
     "name": "sinevia/laravel-mail",
     "description": "Laravel's mail transport for Sinevia Web Services Mail",
     "keywords": ["laravel", "laravel5", "lumen", "sinevia", "mail"],
-    "license": "propriatory",
+    "license": "proprietary",
     "authors": [
     ],
     "require": {
