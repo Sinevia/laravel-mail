@@ -46,7 +46,7 @@ class MailTransport extends Transport {
                 $bcc[] = (is_null($name) ? $email : $name) . ' <' . $email . '>';
             }
         }
-        
+
         $options['form_params'] = [
             'From' => implode(',', $from),
             'To' => implode(',', $to),
@@ -54,11 +54,22 @@ class MailTransport extends Transport {
             'Bcc' => implode(',', $bcc),
             'Text' => $message->getContentType(),
             'Html' => $message->getBody(),
-            'Subject' => $message->getBody(),
+            'Subject' => $message->getSubject(),
             'Token' => $this->key,
         ];
 
-        return $this->client->post($this->url, $options);
+        $response = $this->client->post($this->url, $options);
+        if ($response->getStatusCode() != 200) {
+            return 'Response not 200 but ' . $response->getStatusCode();
+        }
+
+        $responseString = $response->getBody()->getContents();
+        
+        if (str_contains($responseString, ['success']) == true) {
+            return true;
+        }
+        
+        return false;
     }
 
     public function getKey() {
