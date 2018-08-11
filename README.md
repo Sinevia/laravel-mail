@@ -1,4 +1,4 @@
-# laravel-mail
+# Laravel Mail
 
 Laravel package for sending mail via the Sinevia Web Serices API
 
