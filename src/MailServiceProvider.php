@@ -4,7 +4,7 @@ namespace Sinevia\Mail;
 
 use Illuminate\Support\ServiceProvider;
 
-class SineviaMailServiceProvider extends \Illuminate\Mail\MailServiceProvider {
+class MailServiceProvider extends \Illuminate\Mail\MailServiceProvider {
 
     protected function registerSwiftTransport() {
 //        if ($this->app['config']['mail.driver'] == 'sinevia_mail') {
