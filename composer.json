@@ -1,0 +1,19 @@
+
+{
+    "name": "sinevia/laravel-mail",
+    "description": "Laravel's mail transport for Sinevia Web Services Mail",
+    "keywords": ["laravel", "laravel5", "lumen", "sinevia", "mail"],
+    "license": "propriatory",
+    "authors": [
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Siinevia\\Mail\\": "src/"
+        }
+    }
+}
